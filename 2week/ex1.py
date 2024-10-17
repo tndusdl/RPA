@@ -67,27 +67,3 @@ print(df.iloc[0:2], end='\n\n')
 #열 찾기
 print(df[['과목명', '담당교수']], end='\n\n')
 print(df.loc[:'강의실': '담당교수'], end='\n\n')
-
-print("###################################################")
-
-
-#조건 찾기
-#행 찾기
-print(df['과목명'] == '경영학', end='\n\n')
-print(df.loc[df['과목명'] == '경영학'], end='\n\n')
-print(df.loc[df['시간수']>2], end='\n\n')
-
-#셀 찾기
-print(df.loc[df['과목명'] == '경영학']['담당교수'], end='\n\n')
-print(df.loc[df['과목명'] == '경영학']['담당교수'].values[0], end='\n\n')
-
-#df.loc[3]['담당교수'] = '이경영'
-df.loc[3, '담당교수'] = '이경영'
-print(df, end='\n\n')
-
-##df.loc[df['담당교수'] = '경영학']['담당교수'] = '이경영'
-df.loc[df['과목명'] == '경영학', '담당교수'] = '이경영'
-print(df, end='\n\n')
-
-print(df.loc[df['과목명'] == '경영학', '담당교수'].values[0], end='\n\n')
-
