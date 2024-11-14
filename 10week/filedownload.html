@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h2>File Download</h2>
+</head>
+<body>
+    <h2>Download File </h2>
+    <input type="text" id="filename" placeholder="Enter filename">
+<button onclick="downloadFile()">Download File</button>
+
+<script>
+    function downloadFile() {
+        const filename = document.getElementById('filename').value;
+
+        if (filename.length > 0) {
+            const url = `/files/${filename}`;
+
+            const a = document.createElement('a');
+            a.href = url;
+            a.download=filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        } else {
+            alert('Please enter a filename');
+        }
+        }
+    
+</script>
+</body>
+</html>
