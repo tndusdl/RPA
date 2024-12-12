@@ -22,7 +22,8 @@ def makeXL(filename):
         async def make_excel_file():
             filename = "sample.xlsx"
             save_file = "static/files/" + filename
-            import os if os.path.exists(save_file):
+            import os
+            if os.path.exists(save_file):
                 os.remove(save_file)
                 
                 makeXL(save_file)
