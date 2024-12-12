@@ -10,7 +10,7 @@ def makeXL(filename):
     for i in range(1000):
         name = fake.name()
         gender = fake.random_element(elements=('남', '여'))
-        email = fake.phone_number()
+        email = fake.email()
         phone_number = fake.phone_number()
         address = fake.address()
         ws.append([name. gender, email, phone_number, address])
